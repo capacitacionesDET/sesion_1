@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Capacitación en R y herramientas de productividad</title>
+    <title>Capacitación en R</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <meta name="date" content="2020-10-20" />
+    <meta name="date" content="2020-12-02" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -20,13 +20,11 @@ class: center, middle
 &lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
 
 
-## Capacitación en R y herramientas de productividad
-
-## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+## Capacitación en R
 
 ## Introducción y herramientas de exploración de datos
 
-### Octubre 2020
+### Diciembre 2020
 
 
 
@@ -39,45 +37,26 @@ background-image: url("imagenes/fondo2.PNG")
 background-size: contain;
 background-position: 100% 0%
 
-# PE Servicios Compartidos
+# Sobre la autoría de la capacitación
+
+.medium-par[En esta ocasión los relatores somos **Nicolás** y **Gonzalo**].
 
 --
 
-.medium-par[Esta actividad de capacitación se enmarca en el **PE SSCC**.]
+.medium-par[Pero quienes diseñaron la capacitación y elaboraron el material (presentaciones y actividades prácticas) fueron **Ignacio Agloni**, **Klaus Lehmannm** y **Juan Medrano**, en el marco del Proyecto Estratégico Servicios Compartidos para la Producción Estadística.]
 
 --
 
-.medium-par[El PE SSCC es uno de los 4 proyectos estratégicos actualmente en funcionamiento en el INE (2018-2022).]
+.medium-par[Nosotros nos limitamos a hacerles algunas modificaciones menores a la presentación. Todos los créditos a los compañeros.]
 
 --
 
-.medium-par[Este proyecto busca:]
+.medium-par[La presentación fue hecha en R, particularmente en Rmarkdown, con el paquete `xaringan`.]
 
 --
-
-*"Proveer a la institución de estándares y desarrollos que permitan .red[automatizar], .red[estandarizar], .red[ordenar] e .red[innovar] en la producción estadística, permitiendo reducir .red[tiempos] y .red[costos] del procesamiento y análisis de las diferentes operaciones estadísticas del INE y minimizando la probabilidad de .red[errores] en la publicación de resultados".* 
 
 ---
 
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Estructura PE SSCC
-
-![](imagenes/estructura_sscc1.PNG)
-
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Estructura PE SSCC
-
-![](imagenes/estructura_sscc2.PNG)
-
----
 background-image: url("imagenes/fondo2.PNG")
 background-size: contain;
 background-position: 100% 0%
@@ -86,7 +65,7 @@ background-position: 100% 0%
 
 --
 
-.medium-par[Al finalizar la capacitación se espera que las/os participantes:]
+.medium-par[Al finalizar la capacitación se espera que los participantes:]
 
 --
 
@@ -108,6 +87,10 @@ background-position: 100% 0%
 
 - Conozcan **recomendaciones** que les permitan hacer **reproducibles** y **trazables** sus rutinas en R. 
 
+--
+
+- Conozcan herramientas para la **automatización de reportes** y de **tareas de procesamiento y análisis de datos**. 
+
 ---
 
 background-image: url("imagenes/fondo2.PNG")
@@ -117,13 +100,12 @@ background-position: 100% 0%
 # Organización de la capacitación
 
 --
-&lt;br/&gt;
 
-- La capacitación de nivel básico se compone de **5 sesiones**.
+- La capacitación se compone de **6 sesiones**.
 
 --
 
-- Las sesiones de realizarán **semanalmente**, los días **miércoles entre 10:00 y 13:00 hrs** (a excepción de esta).
+- Las sesiones de realizarán, en general, **dos veces por semana** (ver [programa](https://inechile-my.sharepoint.com/personal/loreto_diazm_ine_cl/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Floreto%5Fdiazm%5Fine%5Fcl%2FDocuments%2FCurso%20de%20R%2FPrograma%5Fcurso%5FR%2Epdf&amp;parent=%2Fpersonal%2Floreto%5Fdiazm%5Fine%5Fcl%2FDocuments%2FCurso%20de%20R&amp;originalPath=aHR0cHM6Ly9pbmVjaGlsZS1teS5zaGFyZXBvaW50LmNvbS86YjovZy9wZXJzb25hbC9sb3JldG9fZGlhem1faW5lX2NsL0VRN0VjV1lNV3U5Qm54cG5XMmZQdWFJQmlnUTE2MmJ0M0tzWGkzQkJlWnFXUHc_cnRpbWU9Skc3aE1CU1cyRWc)).
 
 --
 
@@ -131,105 +113,16 @@ background-position: 100% 0%
 
 --
 
-- Si van surgiendo dudas, pueden consultar durante la clase levantando la mano ✋.
+- Si van surgiendo dudas, pueden consultar simplemente interviniendo o anotando las dudas en el chat durante la clase.
 
 --
 
-- Si tienen .pur[dudas que no apuntan directamente al contenido que se está revisando], podemos quedarnos unos minutos al término de la clase para resolverlas, o bien .pur[nos pueden consultar durante la semana].
-
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Organización de la capacitación
-
---
-&lt;br/&gt;
-
-- Compartiremos cada presentación antes del inicio de la sesión. Si existen correcciones detectadas, actualizaremos el repositorio durante la semana posterior.
+- Compartiremos la presentación antes del inicio de la sesión. Si existen correcciones detectadas, actualizaremos el repositorio durante la semana posterior.
 
 --
 
-- Al finalizar cada sesión se les presentará un desafío para resolver durante la semana 🏠. **Estos desafíos no tienen impacto en la evaluación del curso** y .pur[Pueden ser desarrollados en forma individual o en grupos de 2 o 3 personas]. 
+- Al finalizar cada sesión se les presentará un desafío para resolver durante la semana 🏠.
 
---
-
-- El plazo para la entrega de estos desafíos es el **día antes de la siguente sesión de capacitación, a las 12:00 hrs**. En ese momento se subirá a nuestro canal en Teams la solución a los ejercicios. 
-
---
-
-- El objetivo de pedirles los *scripts* es permitirnos .pur[conocer sus avances], .pur[reforzar contenidos] y .pur[retroalimentarlas/os] de considerarse pertinente.
-
---
-
-- 🎥 Las clases serán grabadas para que puedan consultarlas en el futuro. **Se les solicitará consentimiento para realizar esta grabación antes de comenzar cada clase**.
-
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Asistencia y evaluación del curso
-
---
-
-## Asistencia
-
---
-
-- Se requerirá una **asistencia mínima al 80%** de las sesiones de capacitación.
-
---
-
-- Se permitirá justificar inasistencias por uso de permiso administrativo, feriado legal o por motivos laborales, **lo cual deberá ser informado por la jefatura del subdepartamento** al que la/el participante pertenece.
-
---
-
-## Evaluación del curso
-
---
-
-- Las/os participantes deberán realizar una **tarea final**.
-
---
-
-- Deben obtener una calificación mínima de 4 (en una escala de 1 a 7).
-
---
-
-- Al igual que los desafíos semanales, esta tarea .pur[puede ser desarrollada en forma individual o en grupos de 2 o 3 personas].
-
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Contenidos de la capacitación
-
-.medium-par[**Parte I: Herramientas básicas**]
-
---
-
-**Sesión 1:** Introducción y herramientas de exploración de datos
-
-    - ¿Qué es R y por qué usarlo?
-    - La interfaz de R Studio
-    - Tipos de datos y operaciones básicas
-    - Exploración y manipulación básica de un data frame
-
---
-
-**Sesión 2:** Procesamiento de bases de datos (1)
-
-    - Importación de datos desde distintos formatos a R
-    - Introducción a dplyr
-    - Manipulación básica de columnas (select(), rename())
-    - Manipulación básica de filas (arrange(), filter())
-    - Herramientas básicas de edición de datos (if_else())
 
 ---
 
@@ -240,28 +133,87 @@ background-position: 100% 0%
 # Contenidos de la capacitación
 
 --
-&lt;/br&gt;
 
-**Sesión 3:** Procesamiento de bases de datos (2)
+**Sesión 1:** Introducción y herramientas de exploración de datos. 
 
-    - Herramientas básicas de edición de datos (mutate())
-    - Funciones de agrupación (group_by(), summarise())
-    - Tidy data (pivor_longer(), pivot_wider())
+*Miércoles 09 de diciembre, desde las 09:30 a las 12:30.*
 
---
++ ¿Qué es R y por qué usarlo?
 
-**Sesión 4:** Procesamiento de bases de datos (3)
++ La interfaz de R Studio
 
-    - Unión de bases de datos (joins, binds)
-    - Manejo de variables de tiempo (fechas)
++ Tipos de datos y operaciones básicas
+
++ Exploración y manipulación básica de un data frame
 
 --
 
-**Sesión 5:** Visualización de datos usando el paquete ggplot2
+**Sesión 2:** Procesamiento de bases de datos (1). 
 
-    - Visualizar para comunicar efectivamente
-    - La gramática de los gráficos: visualizar datos con ggplot2  
+*Viernes 11 de diciembre, desde las 09:30 a las 12:30.*
 
++ Importación de datos desde distintos formatos a R
+
++ Introducción a dplyr
+
++ Manipulación básica de columnas y de filas
+
++ Herramientas básicas de edición de datos
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Contenidos de la capacitación
+
+**Sesión 3:** Procesamiento de bases de datos (2). 
+
+*Martes 15 de diciembre, desde las 09:30 a las 12:30.*
+
++ Herramientas básicas de edición de dato
+
++ Funciones de agrupación
+
++ Tidy data
+
+--
+
+**Sesión 4:** Procesamiento de bases de datos (3). 
+
+*Viernes 18 de diciembre, desde las 09:30 a las 12:30.*
+
++ Unión de bases de datos (joins, binds)
+
++ Manejo de variables de tiempo (fechas)
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Contenidos de la capacitación
+
+**Sesión 5:** Visualización de datos usando el paquete ggplot2. 
+
+*Martes 22 de diciembre, desde las 09:30 a las 12:30.*
+
++ Visualizar para comunicar efectivamente
+
++ La gramática de los gráficos: visualizar datos con ggplot2
+
+--
+
+**Sesión 6:** En camino a la reproducibilidad. 
+
+*Martes 05 de enero, desde las 09:30 a las 12:30 (por confirmar).*
+
++ ¿Por qué es importante el trabajo reproducible?
+
++ Introducción a Rmarkdown – Instalación – ¿Qué es RMarkdown? – Creando mi primer reporte con RMarkdown
+ 
 ---
 
 class: center, middle
@@ -287,17 +239,16 @@ background-position: 100% 0%
 # ¿Qué es R y por qué usarlo?
 
 --
-&lt;br/&gt;
 
 **R** es un lenguaje de programación creado por dos profesores de estadística de la Universidad de Auckland en 1993 (**Robert Gentleman y Ross Ihaka**).
 
 --
 
-**R** es gratis, su código es abierto y **se encuentra disponible en la mayoría de las plataformas** (Windows, Mac OS, Linux).
+**R** es gratis, su código es abierto y se encuentra disponible en la mayoría de las plataformas (Windows, Mac OS, Linux).
 
 --
 
-**¡Es muy versátil!** Hoy es utilizado para abordar problemas de **distintas disciplinas**, sobre todo de estadística.
+¡Es muy versátil! Hoy es utilizado para abordar problemas de distintas disciplinas, sobre todo de estadística.
 
 --
 
@@ -305,7 +256,7 @@ Posiblemente las **técnicas o metodologías más recientes tengan alguna aplica
 
 --
 
-**Su lenguaje esta hecho para el análisis de datos**.
+**Su lenguaje esta hecho para el análisis de datos**. Esto incluye características como valores perdidos (*missing values*), manipulación de *data frames* y selección de casos.
 
 ---
 
@@ -333,11 +284,11 @@ Anaualmente se realizan conferencias de a nivel mundial [UseR!](https://user2020
 
 --
 
-Cuenta con **poderosas herramientas para comunicar resultados**. Varios paquetes en **R** facilitan la creación de reportes en pdf o en html, así como también para la creación de web interactivas.
+Cuenta con **poderosas herramientas para comunicar resultados**. Varios paquetes en **R** facilitan la creación de reportes en pdf, html o incluso en word, así como también para la creación de web interactivas.
 
 --
 
-Cuenta con un **entorno de desarrollo interactivo** diseñado especialmente para el análisis de datos y la programación estadística (**RStudio**).
+Cuenta con entorno de desarrollo interactivo diseñado especialmente para el análisis de datos y la programación estadística (**RStudio**).
 
 --
 
@@ -369,7 +320,7 @@ background-position: 100% 0%
 
 --
 
-.medium-par[**Boletín índice de Precios al Productor (IPP):**]
+.medium-par[**Boletín índice de Precios al Productor:**]
 
 --
 
@@ -431,15 +382,9 @@ background-position: 100% 0%
 
 # Interactuando con R
 
---
+La interfaz de RStudio está distribuida de la siguiente manera
 
-.center[.medium-par-red[La interfaz de RStudio está distribuida de la siguiente manera]]
-
---
-
-![](imagenes/interfaz_rstudio.PNG)
-
-
+![](imagenes/interfaz_rstudio.png)
 
 ---
 
@@ -449,9 +394,10 @@ background-position: 100% 0%
 
 # Interactuando con R
 
+
 --
 
-.medium-par[Existen dos formas principales de interactuar con **R**:]
+.medium-par[Existen dos maneras principales de interactuar con **R**:]
 
 --
 
@@ -459,7 +405,7 @@ background-position: 100% 0%
 
 --
 
-- .medium-par[Usando archivos *script* (texto plano que contiene nuestro código).]
+- .medium-par[Usando archivos *script* (texto plano que contiene nuestro código, siendo los más común los `.R` ).]
 
 ---
 
@@ -483,11 +429,11 @@ El símbolo `&gt;` significa que **R** está listo para que le entreguemos una i
 
 --
 
-En esta ventana también aparecen los **resultados** de las instrucciones.
+En esta ventana también aparecen los resultados de las instrucciones.
 
 --
 
-Los comandos que se escriban aquí **no serán grabados** para un nuevo inicio de sesión.
+Los comandos que se escriban aquí no serán grabados para un nuevo inicio de sesión.
 
 --
 
@@ -495,7 +441,7 @@ El código escrito en consola se ejecuta con la tecla **Enter**.
   
 --
 
-.medium-par-red[Sin embargo, **una práctica habitual y recomendada** es guardar rutinas completas en archivos *script*.]
+- Sin embargo, **una práctica habitual y recomendada** es guardar rutinas completas en archivos *script*.
   
 ---
 
@@ -509,35 +455,29 @@ background-position: 100% 0%
 
 --
 
-Es común que una tarea la queramos **repetir** más de una vez.
+Es común que una tarea la queramos repetir más de una vez.
 
 --
 
-Esta tarea muchas veces involucra un conjunto de tareas, por lo que es **poco eficiente utilizar la consola** para realizarlas.
+Esta tarea muchas veces involucra un conjunto de tareas, por lo que es poco eficiente utilizar la consola para realizarlas.
 
 --
 
-Resulta conveniente guardar múltiples instrucciones en un archivo de texto (*script*) que luego nos permita **volver a ejecutar** estas tareas.
+Resulta conveniente guardar múltiples instrucciones en un archivo de texto (*script*) que luego nos permita volver a ejecutar estas tareas.
 
 --
 
-Además resulta mucho **más fácil compartir** nuestro trabajo de esta manera.
+Además resulta mucho más fácil compartir nuestro trabajo de esta manera.
 
 --
 
-Para ejecutar el código en *script* puedes utilizar el *shortcut* .pur[Ctrl + Enter].
+Para ejecutar el código en *script* puedes utilizar sl *shortcut* **Ctrl + Enter**.
 
 --
 
-👁️ Para comentar en el *script* se utiliza el signo gato** (#)**
-
---
+👁️ Para comentar en el *script* se utiliza el signo gato **(#)**.
 
 El signo **#** también sirve para **silenciar** código sin tener que borrarlo.
-
---
-
-👀 Con el *shortcut* .pur[Crtl +Shift + c] puedes **silenciar** varias lineas a la vez.
 
 ---
 
@@ -564,6 +504,7 @@ Pruébenlo ustedes mismos en su consola o script.
 ## [1] 9
 ```
 
+--
 
 ```r
 6 * 8
@@ -572,10 +513,10 @@ Pruébenlo ustedes mismos en su consola o script.
 ```
 ## [1] 48
 ```
-
+--
 
 ```r
-(4 + 5) + (6 * 8)
+(4+5) + (6*8)
 ```
 
 ```
@@ -584,13 +525,11 @@ Pruébenlo ustedes mismos en su consola o script.
 
 --
 
-Se pueden hacer cosas mucho más interesantes. Para eso es útil **asignar valores a objetos**
+Se pueden hacer cosas mucho más interesantes. Para eso es útil asignar **valores** a **objetos**.
 
 --
 
-Para esto se utiliza el operador "**&lt;-**" (shortcut **"Alt + -**") 
-
---
+Para esto se utiliza el operador **"&lt;-"**.
 
 
 ```r
@@ -605,17 +544,12 @@ background-position: 100% 0%
 
 # Primeras operaciones en R
 
---
-
-Entonces, podríamos hacer cosas como esta.
-
---
+.medium-par[Entonces, podríamos hacer cosas como esta.]
 
 
 ```r
 a &lt;- 20
 b &lt;- 5
-
 a + b
 ```
 
@@ -625,7 +559,7 @@ a + b
 
 --
 
-El signo "**^**" representa al exponencial. También se puede usar "******"
+.medium-par[El signo "^" representa al exponencial. También se puede usar "**"]
 
 
 ```r
@@ -638,7 +572,7 @@ a + b ^ 2
 
 --
 
-Entonces, podemos hacer operaciones sobre los valores almacenados, a través de estos objetos abstractos (a y b).
+.medium-par[Entonces, podemos hacer operaciones sobre los valores almacenados, a través de estos objetos abstractos (a y b).]
 
 
 ---
@@ -650,13 +584,26 @@ background-position: 100% 0%
 # Ejercicio express 1
 
 --
-&lt;br/&gt;
 
-.medium-par[1- ¿Qué sucede si cambiamos el valor de "a" por 45 y volvemos a realizar la última operación?]
+1- ¿Qué sucede si cambiamos el valor de "a" por 45 y volvemos a realizar la última operación?
 
 --
 
-.medium-par[2- ¿Es posible asignar el resultado a una nueva variable "c"? **¿Cómo lo harían?**]
+2- ¿Es posible asignar el resultado a una nueva variable "c"? ¿Cómo lo harían?
+
+--
+
+
+```r
+a &lt;- 45
+b &lt;- 5
+c &lt;- a + b
+c
+```
+
+```
+## [1] 50
+```
 
 ---
 
@@ -1644,13 +1591,17 @@ Y luego lo cargamos en nuestra sesión (.pur[no basta con instalarlo para usarlo
 library(guaguas)
 ```
 
+```
+## Warning: package 'guaguas' was built under R version 3.6.3
+```
+
 --
 
 Es una base de .medium-par-red[alto interés sociológico]. 🧐
 
 --
 
-&lt;img src="sesion_1_files/figure-html/unnamed-chunk-40-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-41-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1662,7 +1613,7 @@ background-position: 100% 0%
 
 --
 
-&lt;img src="sesion_1_files/figure-html/unnamed-chunk-41-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-42-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1896,6 +1847,14 @@ Cargamos la librería.
 
 ```r
 library(tidyverse)
+```
+
+```
+## Warning: package 'tidyverse' was built under R version 3.6.3
+```
+
+```
+## Warning: package 'tibble' was built under R version 3.6.3
 ```
 
 --

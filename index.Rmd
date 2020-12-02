@@ -321,7 +321,7 @@ background-position: 100% 0%
 
 --
 
-.pull-right[<img src="https://revolution-computing.typepad.com/.a/6a010534b1db25970b01b8d1a4d670970c-pi" height="300" width="400"/>]
+.pull-right[<img src="https://revolution-computing.typepad.com/.a/6a010534b1db25970b01b8d1a4d670970c" height="300" width="400"/>]
 
 ---
 
@@ -369,7 +369,11 @@ background-position: 100% 0%
 
 --
 
-- [Métodos de Imputación VIII EPF: Gastos diarios e ingresos de la actividad laboral y jubilaciones](https://www.ine.cl/docs/default-source/documentos-de-trabajo/190320-documento-imputacion-viii-epf.pdf?sfvrsn=668a66c0_2)
+.medium-par[**Boletín complementario Módulo COVID IR-ICMO:**]
+
+--
+
+- [Boletín COVID-19 (junio a septiembre 2020)](https://www.ine.cl/docs/default-source/sueldos-y-salarios/boletines/espa%C3%B1ol/base-anual-2016-100/m%C3%B3dulo-covid-19-ir-icmo/bolet%C3%ADn_covid_jjas.pdf?sfvrsn=fb3e615c_6) (de R a Word, el paso a PDF fue ejecutado por diseñadores de la institución)
 
 --
 
@@ -397,7 +401,7 @@ background-position: 100% 0%
 
 La interfaz de RStudio está distribuida de la siguiente manera
 
-![](imagenes/interfaz_rstudio.png)
+![](imagenes/interfaz_rstudio.PNG)
 
 ---
 

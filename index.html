@@ -4,7 +4,7 @@
     <title>Capacitación en R</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <meta name="date" content="2020-12-02" />
+    <meta name="date" content="2020-12-04" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -829,7 +829,10 @@ Veamos algunos ejemplos.
 
 
 ```r
-nombres &lt;- c("hans", "claudia", "sara", "pablo")
+nombres &lt;- c("Diana ", "Pablo ", "Rodrigo", "Pamela",
+             "Aylin", "Magdalena","Vicente","Georgina",
+             "Randy","David","Loreto","Carla","Oscar")
+
 a &lt;- c(1, 5, 6, 9:12)
 b &lt;- c(1, 2, 3, "gato")
 ```
@@ -840,10 +843,7 @@ La función "c" (combine) permite unir valores u objetos.
 
 --
 
-- ¿cuántos elementos contiene el vector "a"?
-
-
-- ¿De qué tipo son los vectores creados?
+.medium-par[- ¿cuántos elementos contiene el vector "a"?, ¿De qué tipo son los vectores creados?]
 
 --
 
@@ -896,7 +896,7 @@ typeof(b)
 
 --
 
-.medium-par[Que los vectores sea atómicos ⚛️ significa que .medium-par-red[solo pueden contener un tipo de datos.]]
+.medium-par[Que los vectores sean atómicos ⚛️ significa que .medium-par-red[solo pueden contener un tipo de datos.]]
 
 ---
 
@@ -1088,7 +1088,7 @@ Tenemos .pur[diferentes alternativas para indicar posición]. Veamos ejemplos:
 ```r
 # primero creamos vectores
 numeros &lt;- 20:40 
-nombres &lt;- c("hans", "claudia", "sara", "pablo")
+# nombres variable que ya tenemos creada
 ```
 
 --
@@ -1132,7 +1132,7 @@ nombres[c(1,2)]
 ```
 
 ```
-## [1] "hans"    "claudia"
+## [1] "Diana " "Pablo "
 ```
 --
 
@@ -1144,7 +1144,8 @@ nombres[-2]
 ```
 
 ```
-## [1] "hans"  "sara"  "pablo"
+##  [1] "Diana "    "Rodrigo"   "Pamela"    "Aylin"     "Magdalena" "Vicente"  
+##  [7] "Georgina"  "Randy"     "David"     "Loreto"    "Carla"     "Oscar"
 ```
 
 ```r
@@ -1152,7 +1153,8 @@ nombres[c(-3,-4)]
 ```
 
 ```
-## [1] "hans"    "claudia"
+##  [1] "Diana "    "Pablo "    "Aylin"     "Magdalena" "Vicente"   "Georgina" 
+##  [7] "Randy"     "David"     "Loreto"    "Carla"     "Oscar"
 ```
 ---
 
@@ -1188,6 +1190,73 @@ background-position: 100% 0%
 --
 
 .center[.medium-par-red[Recuerda que para crear objetos o asignar valores debes usar ** &lt;-**]]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+--
+
+# Ejercicio express 2 (solución)
+
+
+--
+
+
+```r
+vector&lt;-c(1:30)
+```
+
+--
+
+
+```r
+vector[5]
+```
+
+```
+## [1] 5
+```
+
+
+--
+
+
+```r
+vector[vector&gt;13]
+```
+
+```
+##  [1] 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+```
+
+
+--
+
+
+```r
+vector_sin_30 &lt;- vector[-30]
+vector_sin_30 
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+## [26] 26 27 28 29
+```
+
+--
+
+
+```r
+pares &lt;- seq(0,30,by=2)
+pares
+```
+
+```
+##  [1]  0  2  4  6  8 10 12 14 16 18 20 22 24 26 28 30
+```
 
 
 ---
@@ -1250,7 +1319,7 @@ Ahora con caracteres:
 ```r
 a &lt;- c("izzy", "jazz", "tyler")
 b &lt;- c("devon", "vanessa", "hilary")
-a &lt; b   # orden alfabético
+a &gt; b   # orden alfabético
 #&gt; [1] FALSE  TRUE FALSE
 ```
 
@@ -1358,16 +1427,16 @@ Podemos entender un data frame como un .pur[conjunto de vectores que tienen la m
 
 
 ```r
-curso &lt;- data.frame(nombre = c("Klaus", "Juan", "Ignacio"),
-                    notas = c(7, 7, 1))
+curso &lt;- data.frame(nombre= nombres[c(1,5,7)],
+                    notas = c(7, 6, 5))
 curso
 ```
 
 ```
 ##    nombre notas
-## 1   Klaus     7
-## 2    Juan     7
-## 3 Ignacio     1
+## 1  Diana      7
+## 2   Aylin     6
+## 3 Vicente     5
 ```
 
 .medium-par-red[La mayor parte de este curso se enfocará en cómo trabajar con este tipo de objetos en R.]
@@ -1486,27 +1555,6 @@ ocupacion
 
 En las sesiones posteriores veremos que son muy importantes, sobre todo cuando queremos .pur[visualizar] nuestros datos 📊📈.
 
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Otros tipos de datos en R
-
-## *Arrays*
-
---
-
-Finalmente, este tipo de datos es similar a las matrices, sin embargo, pueden tener más de dos dimensiones.
-
---
-
-De hecho, .medium-par-red[un *array* de dos dimensiones es lo mismo que una matriz.]
-
---
-
-**No las usaremos para nada en el curso** (pero pueden consultar más sobre ellas con `help(array)` 👀)
 
 ---
 
@@ -1605,7 +1653,7 @@ Es una base de .medium-par-red[alto interés sociológico]. 🧐
 
 --
 
-&lt;img src="index_files/figure-html/unnamed-chunk-41-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-46-1.png" width="700px" height="300px" /&gt;
 
 ---
 
@@ -1617,8 +1665,19 @@ background-position: 100% 0%
 
 --
 
-&lt;img src="index_files/figure-html/unnamed-chunk-42-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-47-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+--
+Rodrigo estaba de moda en los 80', Nicolás en los 00' y Vicente en los 10'.
 
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Para no invisibilizar al resto
+
+&lt;img src="index_files/figure-html/unnamed-chunk-48-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1940,6 +1999,10 @@ Con las herramientas para **seleccionar, filtrar y ordenar**, puedes hacerlo de 
 
 .center[.big-par[🧠]]
 
+--
+
+¡Nos vemos el viernes!
+
 
 
 
@@ -1978,13 +2041,11 @@ class: center, middle
 &lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
 
 
-## Capacitación en R y herramientas de productividad
-
-## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+## Capacitación en R
 
 ## Introducción y herramientas de exploración de datos
 
-### Agosto 2020
+### Diciembre 2020
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

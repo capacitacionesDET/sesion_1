@@ -1,7 +1,7 @@
 ---
 title: "Solución ejercicios - Sesión 1"
-subtitle: "Capacitación en R y herramientas de productividad"
-author: "PE Servicios Compartidos para la Producción Estadística"
+subtitle: "Capacitación en R"
+author: "Capacitadores DET, en base a PE SCPE"
 output: pdf_document
 header-includes:
 - \usepackage[fontsize=11.8pt]{scrextend}
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Vamos a utilizar la base de datos `guaguas`, que conocimos en la primera sesión de este ciclo de capacitaciones. Recuerda que si ya la instalaste, con la función `install.packages("guaguas")`, no necesitas volver a hacerlo, solo deberás cargarla con `library(guaguas)`. 
 
 ```{r, message = F}
-# install.packages("guaguas")
+#install.packages("guaguas")
 library(guaguas)
 ```
 
@@ -39,7 +39,8 @@ str(data)
 Para responder el ejercicio debemos usar las variables `anio` (numeric) y `nombre` (character), para construir un filtro que solo mantenga las observaciones que cumplen la condición. Adicionalmente, mantenemos solo algunas variables en el nuevo objeto `mi_nombre` que creamos (la variable `n` indica la cantidad de personas que nacieron en cada año según cada nombre).
 
 ```{r, warning=F, message=F}
-mi_nombre = data[data$nombre == "Ignacio" & data$anio == 1985, c("nombre", "anio", "n")]
+mi_nombre = data[data$nombre == "Nicolás" & 
+                   data$anio == 1993, c("nombre", "anio", "n")]
 mi_nombre
 ```
 
@@ -53,14 +54,17 @@ Debemos cargar la librería `tidyverse`, que instalamos durante la primera sesi�
 
 ```{r, message=F}
 library(tidyverse)
-mas_usado <- data[data$anio==1985, c("nombre", "anio", "n")]
+mas_usado <- data[data$anio==1993, c("nombre", "anio", "n")]
 mas_usado <- arrange(mas_usado, desc(n))
 ```
 
 O en una sola instrucción.
 
 ```{r, message=F}
-mas_usado <- arrange(data[data$anio==1985, c("nombre", "anio", "n")])
+mas_usado <- arrange(data[data$anio==1993, c("nombre", "anio", "n")])
+
+## Vemos las 10 primeras filas del data frame.
+head(mas_usado,10)
 ```
 
 En este caso al filtrar por año R entrega automáticamente ordenados los nombres según frecuencia, pero podría no ser así, o podríamos querer ordenarlos en sentido inverso.

@@ -763,7 +763,10 @@ Veamos algunos ejemplos.
 --
 
 ```{r, eval = T}
-nombres <- c("hans", "claudia", "sara", "pablo")
+nombres <- c("Diana ", "Pablo ", "Rodrigo", "Pamela",
+             "Aylin", "Magdalena","Vicente","Georgina",
+             "Randy","David","Loreto","Carla","Oscar")
+
 a <- c(1, 5, 6, 9:12)
 b <- c(1, 2, 3, "gato")
 ```
@@ -774,10 +777,7 @@ La función "c" (combine) permite unir valores u objetos.
 
 --
 
-- ¿cuántos elementos contiene el vector "a"?
-
-
-- ¿De qué tipo son los vectores creados?
+.medium-par[- ¿cuántos elementos contiene el vector "a"?, ¿De qué tipo son los vectores creados?]
 
 --
 
@@ -817,7 +817,7 @@ typeof(b)
 
 --
 
-.medium-par[Que los vectores sea atómicos ⚛️ significa que .medium-par-red[solo pueden contener un tipo de datos.]]
+.medium-par[Que los vectores sean atómicos ⚛️ significa que .medium-par-red[solo pueden contener un tipo de datos.]]
 
 ---
 
@@ -987,7 +987,7 @@ Tenemos .pur[diferentes alternativas para indicar posición]. Veamos ejemplos:
 ```{r}
 # primero creamos vectores
 numeros <- 20:40 
-nombres <- c("hans", "claudia", "sara", "pablo")
+# nombres variable que ya tenemos creada
 ```
 
 --
@@ -1059,6 +1059,51 @@ background-position: 100% 0%
 
 .center[.medium-par-red[Recuerda que para crear objetos o asignar valores debes usar ** <-**]]
 
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+--
+
+# Ejercicio express 2 (solución)
+
+
+--
+
+```{r}
+vector<-c(1:30)
+```
+
+--
+
+```{r}
+vector[5]
+```
+
+
+--
+
+```{r}
+vector[vector>13]
+```
+
+
+--
+
+```{r}
+vector_sin_30 <- vector[-30]
+vector_sin_30 
+```
+
+--
+
+```{r}
+pares <- seq(0,30,by=2)
+pares
+```
+
 
 ---
 
@@ -1117,7 +1162,7 @@ Ahora con caracteres:
 ```{r, echo=TRUE, eval=FALSE}
 a <- c("izzy", "jazz", "tyler")
 b <- c("devon", "vanessa", "hilary")
-a < b   # orden alfabético
+a > b   # orden alfabético
 #> [1] FALSE  TRUE FALSE
 ```
 
@@ -1217,8 +1262,8 @@ Podemos entender un data frame como un .pur[conjunto de vectores que tienen la m
 --
 
 ```{r}
-curso <- data.frame(nombre = c("Klaus", "Juan", "Ignacio"),
-                    notas = c(7, 7, 1))
+curso <- data.frame(nombre= nombres[c(1,5,7)],
+                    notas = c(7, 6, 5))
 curso
 ```
 
@@ -1322,27 +1367,6 @@ ocupacion
 
 En las sesiones posteriores veremos que son muy importantes, sobre todo cuando queremos .pur[visualizar] nuestros datos 📊📈.
 
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Otros tipos de datos en R
-
-## *Arrays*
-
---
-
-Finalmente, este tipo de datos es similar a las matrices, sin embargo, pueden tener más de dos dimensiones.
-
---
-
-De hecho, .medium-par-red[un *array* de dos dimensiones es lo mismo que una matriz.]
-
---
-
-**No las usaremos para nada en el curso** (pero pueden consultar más sobre ellas con `help(array)` 👀)
 
 ---
 
@@ -1435,7 +1459,7 @@ Es una base de .medium-par-red[alto interés sociológico]. 🧐
 
 --
 
-```{r, echo = F, warning=F, out.width = "700px", out.height="400px" , fig.align='center'}
+```{r, echo = F, warning=F, out.width = "700px", out.height="300px"}
 library(guaguas)
 library(dplyr)
 library(stringr)
@@ -1445,13 +1469,14 @@ library(hrbrthemes)
 library(ggthemes)
 
 guaguas %>% 
-  filter(nombre %in% c("Milenka", "Branco", "Salomé"), anio > 1980) %>% 
-  ggplot(aes(anio, n, color = nombre)) + 
+  filter(nombre %in% c("Brian", "Kevin", "Bryan", "Brayan")) %>% 
+  ggplot(aes(anio, n, color = fct_reorder2(nombre, anio, n))) +
   geom_line() +
   scale_color_colorblind() +
-  labs(x = "año", y = "total inscripciones",
-       title = "Inscripciones de nombres de personajes\n de 'Romané'") +
-  theme_ipsum()
+  labs(x = "año", y = "total inscripciones", color = "nombre",
+       title = "El efecto 'Backstreet Boys'") +
+  theme_bw()
+
 ```
 
 ---
@@ -1465,16 +1490,39 @@ background-position: 100% 0%
 --
 
 ```{r, echo = F, warning=F, out.width = "700px", out.height="400px" , fig.align='center'}
-guaguas %>% 
-  filter(nombre %in% c("Brian", "Kevin", "Bryan", "Brayan")) %>% 
-  ggplot(aes(anio, n, color = fct_reorder2(nombre, anio, n))) +
-  geom_line() +
-  scale_color_colorblind() +
-  labs(x = "año", y = "total inscripciones", color = "nombre",
-       title = "El efecto 'Backstreet Boys'") +
-  theme_ipsum()
-```
 
+guaguas %>% 
+  filter(nombre %in% c(nombres,"Nicolás","Gonzalo"), anio > 1950) %>% 
+  ggplot(aes(anio, n, color = nombre)) + 
+  geom_line() +
+  labs(x = "año", y = "total inscripciones",
+       title = "Inscripciones de nombres de asistentes al Curso R") +
+  theme_bw()
+
+```
+--
+Rodrigo estaba de moda en los 80', Nicolás en los 00' y Vicente en los 10'.
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Para no invisibilizar al resto
+
+```{r, echo = F, warning=F, out.width = "700px", out.height="400px" , fig.align='center'}
+
+guaguas %>% 
+  filter(nombre %in% c(nombres[nombres!="Vicente"&nombres!="Rodrigo"],"Gonzalo"), anio > 1950) %>% 
+  ggplot(aes(anio, n, color = nombre)) + 
+  geom_line() +
+  labs(x = "año", y = "total inscripciones",
+       title = "Inscripciones de nombres de asistentes al Curso R",
+       subtitle = "Fuera Vicente, Nicolás y Rodrigo") +
+  theme_bw()
+
+```
 
 ---
 
@@ -1745,6 +1793,10 @@ Con las herramientas para **seleccionar, filtrar y ordenar**, puedes hacerlo de 
 
 .center[.big-par[🧠]]
 
+--
+
+¡Nos vemos el viernes!
+
 
 ```{r, echo=F, include=F}
 data %>% group_by(nombre) %>% 
@@ -1787,10 +1839,8 @@ class: center, middle
 <img src="imagenes/logo_portada2.png" width="200" />
 
 
-## Capacitación en R y herramientas de productividad
-
-## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+## Capacitación en R
 
 ## Introducción y herramientas de exploración de datos
 
-### Agosto 2020
+### Diciembre 2020

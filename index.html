@@ -829,9 +829,9 @@ Veamos algunos ejemplos.
 
 
 ```r
-nombres &lt;- c("Diana ", "Pablo ", "Rodrigo", "Pamela",
-             "Aylin", "Magdalena","Vicente","Georgina",
-             "Randy","David","Loreto","Carla","Oscar")
+nombres &lt;- c("Diana", "Pablo", "Rodrigo", "Pamela",
+             "Aylin", "Magdalena", "Vicente", "Georgina", "Joaquín",
+             "Randy", "David", "Loreto", "Carla", "Oscar")
 
 a &lt;- c(1, 5, 6, 9:12)
 b &lt;- c(1, 2, 3, "gato")
@@ -1029,7 +1029,7 @@ En general, cuando trabajamos con datos ordenados **nos interesa seleccionar uno
 
 
 ```r
-bandas_cl &lt;- c("Los prisioneros", "Los Bunkers", 
+bandas_cl &lt;- c("Los Prisioneros", "Los Bunkers", 
                "Los Ángeles Negros") 
 bandas_arg &lt;- c("Pescado rabioso", "Spinetta Jade", 
                 "Virus", "Soda Stereo")
@@ -1038,7 +1038,7 @@ bandas
 ```
 
 ```
-## [1] "Los prisioneros"    "Los Bunkers"        "Los Ángeles Negros"
+## [1] "Los Prisioneros"    "Los Bunkers"        "Los Ángeles Negros"
 ## [4] "Pescado rabioso"    "Spinetta Jade"      "Virus"             
 ## [7] "Soda Stereo"
 ```
@@ -1132,7 +1132,7 @@ nombres[c(1,2)]
 ```
 
 ```
-## [1] "Diana " "Pablo "
+## [1] "Diana" "Pablo"
 ```
 --
 
@@ -1144,8 +1144,9 @@ nombres[-2]
 ```
 
 ```
-##  [1] "Diana "    "Rodrigo"   "Pamela"    "Aylin"     "Magdalena" "Vicente"  
-##  [7] "Georgina"  "Randy"     "David"     "Loreto"    "Carla"     "Oscar"
+##  [1] "Diana"     "Rodrigo"   "Pamela"    "Aylin"     "Magdalena" "Vicente"  
+##  [7] "Georgina"  "Joaquín"   "Randy"     "David"     "Loreto"    "Carla"    
+## [13] "Oscar"
 ```
 
 ```r
@@ -1153,8 +1154,8 @@ nombres[c(-3,-4)]
 ```
 
 ```
-##  [1] "Diana "    "Pablo "    "Aylin"     "Magdalena" "Vicente"   "Georgina" 
-##  [7] "Randy"     "David"     "Loreto"    "Carla"     "Oscar"
+##  [1] "Diana"     "Pablo"     "Aylin"     "Magdalena" "Vicente"   "Georgina" 
+##  [7] "Joaquín"   "Randy"     "David"     "Loreto"    "Carla"     "Oscar"
 ```
 ---
 
@@ -1413,7 +1414,7 @@ Existen estructuras de datos más complejas que los vectores.
 
 --
 
-## data frames
+## Data frames
 
 --
 
@@ -1434,7 +1435,7 @@ curso
 
 ```
 ##    nombre notas
-## 1  Diana      7
+## 1   Diana     7
 ## 2   Aylin     6
 ## 3 Vicente     5
 ```
@@ -1645,11 +1646,11 @@ library(guaguas)
 
 --
 
-Es una base de .medium-par-red[alto interés sociológico]. 🧐
+Es una base de .pur[alto interés sociológico]. 🧐
 
 --
 
-&lt;img src="index_files/figure-html/unnamed-chunk-46-1.png" width="700px" height="450px" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-46-1.png" width="500px" height="420px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1661,7 +1662,7 @@ background-position: 100% 0%
 
 --
 
-&lt;img src="index_files/figure-html/unnamed-chunk-47-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-47-1.png" width="600px" height="550px" style="display: block; margin: auto;" /&gt;
 --
 Rodrigo estaba de moda en los 80', Nicolás en los 00' y Vicente en los 10'.
 
@@ -1673,7 +1674,7 @@ background-position: 100% 0%
 
 # Para no invisibilizar al resto
 
-&lt;img src="index_files/figure-html/unnamed-chunk-48-1.png" width="700px" height="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-48-1.png" width="600px" height="550px" style="display: block; margin: auto;" /&gt;
 
 ---
 

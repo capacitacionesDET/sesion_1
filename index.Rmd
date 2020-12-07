@@ -765,9 +765,9 @@ Veamos algunos ejemplos.
 --
 
 ```{r, eval = T}
-nombres <- c("Diana ", "Pablo ", "Rodrigo", "Pamela",
-             "Aylin", "Magdalena","Vicente","Georgina",
-             "Randy","David","Loreto","Carla","Oscar")
+nombres <- c("Diana", "Pablo", "Rodrigo", "Pamela",
+             "Aylin", "Magdalena", "Vicente", "Georgina", "Joaquín",
+             "Randy", "David", "Loreto", "Carla", "Oscar")
 
 a <- c(1, 5, 6, 9:12)
 b <- c(1, 2, 3, "gato")
@@ -942,7 +942,7 @@ En general, cuando trabajamos con datos ordenados **nos interesa seleccionar uno
 --
 
 ```{r}
-bandas_cl <- c("Los prisioneros", "Los Bunkers", 
+bandas_cl <- c("Los Prisioneros", "Los Bunkers", 
                "Los Ángeles Negros") 
 bandas_arg <- c("Pescado rabioso", "Spinetta Jade", 
                 "Virus", "Soda Stereo")
@@ -1251,7 +1251,7 @@ Existen estructuras de datos más complejas que los vectores.
 
 --
 
-## data frames
+## Data frames
 
 --
 
@@ -1457,11 +1457,11 @@ library(guaguas)
 
 --
 
-Es una base de .medium-par-red[alto interés sociológico]. 🧐
+Es una base de .pur[alto interés sociológico]. 🧐
 
 --
 
-```{r, echo = F, warning=F, out.width = "700px", out.height="450px"}
+```{r, echo = F, warning=F, out.width = "500px", out.height="420px", dpi=300, fig.align='center'}
 library(guaguas)
 library(dplyr)
 library(stringr)
@@ -1469,15 +1469,16 @@ library(ggplot2)
 library(forcats)
 library(hrbrthemes)
 library(ggthemes)
+library(jtools)
 
 guaguas %>% 
   filter(nombre %in% c("Brian", "Kevin", "Bryan", "Brayan")) %>% 
   ggplot(aes(anio, n, color = fct_reorder2(nombre, anio, n))) +
   geom_line() +
   scale_color_colorblind() +
-  labs(x = "año", y = "total inscripciones", color = "nombre",
+  labs(x = "Año", y = "Total inscripciones", color = "Nombre",
        title = "El efecto 'Backstreet Boys'") +
-  theme_bw()
+  theme_nice()
 
 ```
 
@@ -1491,15 +1492,15 @@ background-position: 100% 0%
 
 --
 
-```{r, echo = F, warning=F, out.width = "700px", out.height="400px" , fig.align='center'}
+```{r, echo = F, warning=F, out.width = "600px", out.height="550px", dpi=300, fig.align='center'}
 
 guaguas %>% 
   filter(nombre %in% c(nombres,"Nicolás","Gonzalo"), anio > 1950) %>% 
   ggplot(aes(anio, n, color = nombre)) + 
   geom_line() +
-  labs(x = "año", y = "total inscripciones",
+  labs(x = "Año", y = "Total inscripciones", color = "Nombre",
        title = "Inscripciones de nombres de asistentes al Curso R") +
-  theme_bw()
+  theme_nice()
 
 ```
 --
@@ -1513,16 +1514,16 @@ background-position: 100% 0%
 
 # Para no invisibilizar al resto
 
-```{r, echo = F, warning=F, out.width = "700px", out.height="400px" , fig.align='center'}
+```{r, echo = F, warning=F, out.width = "600px", out.height="550px", dpi=300, fig.align='center'}
 
 guaguas %>% 
   filter(nombre %in% c(nombres[nombres!="Vicente"&nombres!="Rodrigo"],"Gonzalo"), anio > 1950) %>% 
   ggplot(aes(anio, n, color = nombre)) + 
   geom_line() +
-  labs(x = "año", y = "total inscripciones",
+  labs(x = "Año", y = "Total inscripciones", color = "Nombre",
        title = "Inscripciones de nombres de asistentes al Curso R",
-       subtitle = "Fuera Vicente, Nicolás y Rodrigo") +
-  theme_bw()
+       subtitle = "Sin Vicente, Nicolás y Rodrigo") +
+  theme_nice()
 
 ```
 

@@ -36,6 +36,8 @@ knitr::opts_chunk$set(message = FALSE)
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
+library(showtext)
+
 #style_duo_accent(
  # primary_color = "#1381B0",
   #secondary_color = "#FF961C",
@@ -52,7 +54,7 @@ background-position: 100% 0%
 
 # Sobre la autoría de la capacitación
 
-.medium-par[En esta ocasión los relatores somos **Nicolás** y **Gonzalo**].
+.medium-par[En esta ocasión los relatores somos **Nicolás Ratto** y **Gonzalo Franetovic**].
 
 --
 
@@ -1459,7 +1461,7 @@ Es una base de .medium-par-red[alto interés sociológico]. 🧐
 
 --
 
-```{r, echo = F, warning=F, out.width = "700px", out.height="300px"}
+```{r, echo = F, warning=F, out.width = "700px", out.height="450px"}
 library(guaguas)
 library(dplyr)
 library(stringr)
